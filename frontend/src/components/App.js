@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import GithubCorner from "react-github-corner";
-import { API_BASE_URL } from '../config';
+import { API_BASE_URL } from "../config";
 
 function App() {
   const [walletInfo, setWalletInfo] = useState({});
 
   useEffect(() => {
     fetch(`${API_BASE_URL}/wallet/info`)
-      .then(response => response.json())
-      .then(json => setWalletInfo(json));
+      .then((response) => response.json())
+      .then((json) => setWalletInfo(json));
   }, []);
 
   const { address, balance } = walletInfo;
