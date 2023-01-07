@@ -1,4 +1,4 @@
-## Fichain | A Blockchain & Cryptocurrency App
+## Fichain | Blockchain & Cryptocurrency App
 
 <img src="frontend/src/assets/fichain-frontend.png" alt="frontend" title="Optional title">
 
@@ -6,7 +6,7 @@
 ## Background 📖
 
 Understanding blockchain isn't easy. At least it wasn't for me. 
-I had to go through number of frustrations due to a few funcional open source examples of how this technology works.
+I had to go through number of frustrations due to a few functional open source examples of how this technology works.
 And I like __learning by doing__ so if you do the same, allow me to guide you and by the end you will also have a __functioning blockchain__.
 To take it a step further, I connected the blockchain with a __frontend UI__ to provide a solid perception of how blockchains work.
 
@@ -43,7 +43,7 @@ and participate in the creation of the blockchain by validating blocks.
 
 ### My workflow
 
-- Building the blockchain app with __Python__.
+- Build the blockchain app with __Python__.
 
 - Implement __dynamic difficulty__ for the mining of new blocks.
 
@@ -55,7 +55,7 @@ and participate in the creation of the blockchain by validating blocks.
 
 - Integrate the __Cryptocurrency__, building __Wallets, Keys,__ and __Transactions__.
 
-- Testing the app using __Pytest__.
+- Test the app using __Pytest__.
 
 - Extend the __network implementation__ with the cryptocurrency.
 
@@ -63,7 +63,7 @@ and participate in the creation of the blockchain by validating blocks.
 
 - Establish frontend-backend connections and begin coding with __React.js__.
 
-- Create the frontend portion for the blockchain portion of the system.
+- Create the frontend for the blockchain portion of the system.
 
 - Complete the frontend by building a __UI__ for the cryptocurrency portion of the system.
 
