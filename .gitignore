@@ -4,3 +4,4 @@
 *node_modules*
 blockchain-env/lib/python3.7
 env/
+webpack.config.js

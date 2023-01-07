@@ -2,7 +2,7 @@ import os
 import requests
 import random
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, send_from_directory, render_template, request
 from flask_cors import CORS
 
 from backend.blockchain.blockchain import Blockchain
@@ -11,7 +11,7 @@ from backend.wallet.transaction import Transaction
 from backend.wallet.transaction_pool import TransactionPool
 from backend.pubsub import PubSub
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./static/')
 CORS(app, resources={r'/*': {'origins': 'http://localhost:3000'}})
 blockchain = Blockchain()
 wallet = Wallet(blockchain)
@@ -21,7 +21,7 @@ pubsub = PubSub(blockchain, transaction_pool)
 
 @app.route('/')
 def route_default():
-    return 'Welcome to the blockchain💙🤍'
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 @app.route('/blockchain')
@@ -128,4 +128,4 @@ if os.environ.get('SEED_DATA') == 'True':
             Transaction(Wallet(), Wallet().address, random.randint(2, 50))
         )
 
-app.run(port=PORT)
+app.run(host='localhost')
