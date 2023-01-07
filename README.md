@@ -67,13 +67,6 @@ and participate in the creation of the blockchain by validating blocks.
 
 - Complete the frontend by building a __UI__ for the cryptocurrency portion of the system.
 
-At this point, there is an initial deployment but there are more actions needed to be made,
-in order to deploy both Flask and React subfolders and estabilish a full deployment (propably on Heroku).
-
-Feel free to check the current deployment here:
-
-https://fichain.vercel.app/
-
 
 ## Installation 🛠
 
@@ -145,33 +138,18 @@ npm install
 
 ## Run application 🤖
 
-To run the application, we first need to start the flask app (network-backend).
+To run the application, we need to start the flask app (network-backend).
 To do so, we have to open a new terminal, activate our virtual environment (env) and type:
 
 ```
 python -m backend.app
 ```
 
-If all goes good, our flask app will run on http://127.0.0.1:5000 and the result should be something like this:
-
-<img src="frontend/src/assets/fichain-flask.png" alt="flask" title="Optional title">
-
-
-On a new terminal, we navigate on our React folder with:
-
-```
-cd frontend
-```
-
-and then we type:
-
-```
-npm start
-```
-
-The frontend will run on http://localhost:3000/ and the app is live !!!
+If all goes good, our flask app will run on http://localhost:5000 and the result should be something like this:
 
 <img src="frontend/src/assets/fichain-frontend.png" alt="frontend-1" title="Optional title">
+
+__The server (flask) also serves the frontend.__
 
 Finally, it would be recommended to proceed with some test transactions,
 in order to add blocks, store some data and therefore being able to interact with the blockchain.
@@ -237,13 +215,6 @@ Make sure to activate the virtual environment.
 
 ```
 python -m backend.app
-```
-
-**Run the frontend**
-
-In the frontend directory:
-```
-npm start
 ```
 
 
