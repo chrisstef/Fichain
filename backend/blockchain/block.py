@@ -5,7 +5,7 @@ from backend.util.hex_to_binary import hex_to_binary
 from backend.config import MINE_RATE
 
 GENESIS_DATA = {
-    'timestamp': 1,
+    'timestamp': time.time_ns() // 1000000000,
     'last_hash': 'genesis_last_hash',
     'hash': 'genesis_hash',
     'data': [],
