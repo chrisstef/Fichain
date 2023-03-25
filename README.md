@@ -72,13 +72,13 @@ and participate in the creation of the blockchain by validating blocks.
 
 First, navigate to the folder where your project will exist:
 
-```
+```sh
 cd <folder_name>
 ```
 
 Then, clone to the project with the following command:
 
-```
+```sh
 git clone https://github.com/chrisstef/fichain
 ```
 
@@ -92,47 +92,41 @@ each project can rely on the versions of their dependencies to stay consistent.
 
 Let's proceed with activating it:
 
-```
+```sh
 .\env\Scripts\activate
 ```
 
 Our virtual environment called `env` is activated. Moving to backend.
 
 
+
 ### Backend
 
 Make sure that virtual environment is activated:
 
-```
+```sh
 .\env\Scripts\activate
 ```
 
 Navigate the to `/backend` directory:
 
-```
+```sh
 cd backend
 ```
 
 We'll install the requirements coming from `requirements.txt` file with the following command:
 
-```
+```sh
 pip install -r requirements.txt
 ```
 
-Backend is set up. 
+Make sure you create and add your own PubNub key pairs as provided here: [PubNub](https://admin.pubnub.com/).
 
+After you obtain them, create a `.env` file in the root of the project and add them there in the following format:
 
-### Frontend
-
-With env activated, navigate to the `/frontend` directory:
-
-```
-cd frontend
-```
-and then:
-
-```
-npm install
+```sh
+SUBSCRIBE_KEY=sub-c-636910b6-bbc7-4185-8fe1-375dee826a3f
+PUBLISH_KEY=pub-c-1359d757-bf6b-47b4-8925-774748e8f71309
 ```
 
 
@@ -141,7 +135,7 @@ npm install
 To run the application, we need to start the flask app (network-backend).
 To do so, we have to open a new terminal, activate our virtual environment (env) and type:
 
-```
+```sh
 python -m backend.app
 ```
 
@@ -149,14 +143,14 @@ If all goes good, our flask app will run on http://localhost:5000 and the result
 
 <img src="frontend/src/assets/fichain-frontend.png" alt="frontend-1" title="Optional title">
 
-__The server (flask) also serves the frontend.__
+>Update: __The server (flask) also serves the frontend.__
 
 Finally, it would be recommended to proceed with some test transactions,
 in order to add blocks, store some data and therefore being able to interact with the blockchain.
 
-To do so, on a 3rd terminal activate our virtual environment (env) and type:
+To do so, on a 2nd terminal activate our virtual environment (env) and type:
 
-```
+```sh
 python -m backend.scripts.test_app
 ```
 
@@ -164,6 +158,27 @@ This script will create test transactions between known addresses and distribute
 block reward on the nodes. The script runs 4 times, therefore we will have 4 new blocks.
 
 <img src="frontend/src/assets/fichain-populate.png" alt="populate" title="Optional title">
+
+
+
+### Frontend (Optional)
+
+Even though the frontend is rendered through the backend, if you want to run it seperately, navigate to `/frontend` from the root directory:
+
+```sh
+cd frontend
+```
+and then:
+
+```sh
+npm install
+```
+
+Then run:
+
+```sh
+npm start
+```
 
 
 ## Run tests ✔
