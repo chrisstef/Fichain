@@ -221,7 +221,7 @@ python -m backend.app
 ## Contribution 💡
 
 Thank you for considering to help out with the source code! I welcome contributions from anyone on the internet, 
-and am grateful for even the smallest of fixes all the way to your best ideas!
+and I am grateful for even the smallest of fixes all the way to your best ideas!
 If you'd like to contribute to fichain, please fork, fix, commit and send a pull request to review and merge into the main code base. 
 
 
